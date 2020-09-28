@@ -1,0 +1,90 @@
+// colors:
+// light green: #7ed56f
+// medium green: #55c57a
+// dark green: #28b485
+
+.header {
+  position: relative;
+
+  // 95% of the viewport
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.699),
+      rgba(40, 180, 133, 0.705)
+    ),
+    url("../../assets/pic1.jpg");
+  // crop picture from the center
+  background-position: center;
+  // fill image in the viewport
+  background-size: cover;
+  // leikkaa tausta hieman sivuttain
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  // center this div relation to the parent
+  top: 40%;
+  left: 50%;
+  // keskitetään itse div element relation to itself
+  transform: translate(-50%, -50%);
+}
+.heading-primary {
+  color: #fff;
+}
+.heading-primary-main {
+  // vie koko rivin ja vaihtaa riviä joten teksti menee eri riville
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  //animation
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+}
+.heading-primary-sub {
+  display: block;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 18px;
+
+  //animation
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+}
+
+// @animation animation name
+@keyframes moveInLeft {
+  //start
+  0% {
+    opacity: 0;
+    // x = left to right
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  //finish
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

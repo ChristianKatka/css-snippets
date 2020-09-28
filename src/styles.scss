@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: 'Lato', sans-serif;
+
+  // border margin or padding is gone meaby :D
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777777;
+}
+
